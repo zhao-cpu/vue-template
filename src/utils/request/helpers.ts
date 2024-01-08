@@ -1,22 +1,23 @@
 export function handleAxiosError(axiosError: any) {
-  // 处理 error
+  // 默认值
   const error = {
-    code: 'UNKNOWN_ERROR_CODE',
+    code: 'ERR_BAD_RESPONSE',
     status: 500,
     message: '请求错误'
   }
 
   /**  2xx 范围的错误处理 */
   if (axiosError?.data) {
-    const { code, status, msg: message } = axiosError.data
-    Object.assign(error, { code, status, message })
-  }
-  /** 超出 2xx 范围的错误处理 */
-  if (axiosError?.response) {
-    const { status } = axiosError.response
-    const { code, message } = axiosError.response.data
+    const { status } = axiosError
+    const { code, msg: message } = axiosError.data
     Object.assign(error, { code, status, message })
   }
 
-  console.log('统一 error ', error)
+  /** 超出 2xx 范围的错误处理 */
+  if (axiosError?.response) {
+    const { code, message, status } = axiosError.response.data
+    Object.assign(error, { code, status, message })
+  }
+
+  console.log('统一处理 error ： ', error)
 }

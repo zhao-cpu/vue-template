@@ -1,19 +1,16 @@
 <script setup lang="ts">
-import { usersApi } from '@/api/user'
-
-async function save() {
+async function getUserList() {
   try {
-    const result = await usersApi()
-    console.log('result', result)
+    await usersApi()
   } catch (error) {
-    console.log('error', error)
+    console.log('app error', error)
   }
 }
 </script>
 
 <template>
-  <button @click="save">保存</button>
   <header>
+    <h1 @click="getUserList()" class="text-red-600">Users App</h1>
     <div class="wrapper">
       <nav>
         <RouterLink to="/">Home</RouterLink>
