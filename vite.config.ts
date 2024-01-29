@@ -17,18 +17,10 @@ export default defineConfig({
       /* options */
       // dts: true
       dts: './src/types/components.d.ts',
-      resolvers: [
-        // ElementPlusResolver(),
-      ]
+      resolvers: []
     }),
     AutoImport({
       /* options */
-      include: [
-        /\.[tj]sx?$/, // .ts, .tsx, .js, .jsx
-        /\.vue$/,
-        /\.vue\?vue/, // .vue
-        /\.md$/ // .md
-      ],
       dts: './src/types/auto-imports.d.ts',
       // dts: true, //启用此选项 options.dts 可 auto-imports.d.ts 自动生成文件 ,确保 auto-imports.d.ts 未排除在 tsconfig.json
       imports: [
@@ -43,8 +35,8 @@ export default defineConfig({
           ]
         }
       ],
-      // hooks
-      dirs: ['./src/hooks/**', './src/api/**']
+      // composables
+      dirs: ['./src/composables/**', './src/api/**']
     }),
     UnoCSS(),
     removeConsole()
