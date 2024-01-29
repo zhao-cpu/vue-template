@@ -26,6 +26,7 @@
     "pinia-plugin-persistedstate": "^3.2.1",
     "qs": "^6.11.2",
     "sass": "^1.69.7",
+    "unplugin-icons": "^0.18.3",
     "vue": "^3.3.11",
     "vue-router": "^4.2.5"
   },

@@ -7,6 +7,7 @@ defineOptions({ name: 'AboutView' })
     <h2>about</h2>
     <div class="text-28px">
       <XIcon icon="vscode-icons:file-type-favicon" />
+      <i-svg-logo />
     </div>
   </div>
 </template>

@@ -8,6 +8,10 @@ import Components from 'unplugin-vue-components/vite'
 import UnoCSS from 'unocss/vite'
 import removeConsole from 'vite-plugin-remove-console'
 
+import Icons from 'unplugin-icons/vite'
+import IconsResolver from 'unplugin-icons/resolver'
+import { FileSystemIconLoader } from 'unplugin-icons/loaders'
+
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
@@ -17,7 +21,11 @@ export default defineConfig({
       /* options */
       // dts: true
       dts: './src/types/components.d.ts',
-      resolvers: []
+      resolvers: [
+        IconsResolver({
+          customCollections: ['svg']
+        })
+      ]
     }),
     AutoImport({
       /* options */
@@ -39,7 +47,13 @@ export default defineConfig({
       dirs: ['./src/composables/**', './src/api/**']
     }),
     UnoCSS(),
-    removeConsole()
+    removeConsole(),
+    Icons({
+      compiler: 'vue3',
+      customCollections: {
+        svg: FileSystemIconLoader('./src/assets/svg-icon')
+      }
+    })
   ],
   server: {
     host: '0.0.0.0',
