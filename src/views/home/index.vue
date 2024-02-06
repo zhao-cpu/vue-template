@@ -2,7 +2,8 @@
 import { emitter } from '@/utils/mitt'
 
 defineOptions({ name: 'HomeView' })
-
+const route = useRoute()
+console.log(route)
 async function getName() {
   emitter.emit('get-name', 'zs')
 }

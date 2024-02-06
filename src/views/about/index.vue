@@ -1,5 +1,8 @@
 <script lang="ts" setup>
 defineOptions({ name: 'AboutView' })
+
+const route = useRoute()
+console.log(route)
 </script>
 
 <template>
