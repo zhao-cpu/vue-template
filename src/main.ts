@@ -4,6 +4,7 @@ import 'virtual:uno.css'
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 import piniaPluginPersistedstate from 'pinia-plugin-persistedstate'
+import directives from '@/directives'
 
 import App from './App.vue'
 import router from './router'
@@ -15,5 +16,6 @@ pinia.use(piniaPluginPersistedstate)
 
 app.use(pinia)
 app.use(router)
+app.use(directives)
 
 app.mount('#app')
