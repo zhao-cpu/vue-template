@@ -1,10 +1,10 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import { homeRouter, usersRouter, errorRouter } from '@/router/modules'
+import { homeRouter, usersRouter, cesiumRouter, errorRouter } from '@/router/modules'
 import { useTitle } from '@vueuse/core'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.VITE_BASE_URL),
-  routes: [...homeRouter, ...usersRouter, ...errorRouter],
+  routes: [...homeRouter, ...usersRouter, ...cesiumRouter, ...errorRouter],
   scrollBehavior(_, __, savedPosition) {
     if (savedPosition) {
       return savedPosition

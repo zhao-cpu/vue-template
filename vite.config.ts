@@ -11,6 +11,7 @@ import removeConsole from 'vite-plugin-remove-console'
 import Icons from 'unplugin-icons/vite'
 import IconsResolver from 'unplugin-icons/resolver'
 import { FileSystemIconLoader } from 'unplugin-icons/loaders'
+import cesium from 'vite-plugin-cesium'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -53,7 +54,8 @@ export default defineConfig({
       customCollections: {
         svg: FileSystemIconLoader('./src/assets/svg-icon')
       }
-    })
+    }),
+    cesium()
   ],
   server: {
     host: '0.0.0.0',
