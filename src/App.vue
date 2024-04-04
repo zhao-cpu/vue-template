@@ -5,5 +5,3 @@ defineOptions({ name: 'App' })
 <template>
   <router-view />
 </template>
-
-<style scoped></style>
