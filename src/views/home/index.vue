@@ -3,7 +3,5 @@ defineOptions({ name: 'HomeView' })
 </script>
 
 <template>
-  <div class="text-red-600">home</div>
+  <div class="w-375px bg-blue-400 text-24px">home</div>
 </template>
-
-<style lang="scss" scoped></style>
