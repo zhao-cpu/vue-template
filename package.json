@@ -22,6 +22,7 @@
     "axios": "^1.6.3",
     "crypto-js": "^4.2.0",
     "dayjs": "^1.11.10",
+    "echarts": "^5.5.0",
     "mitt": "^3.0.1",
     "pinia": "^2.1.7",
     "pinia-plugin-persistedstate": "^3.2.1",
