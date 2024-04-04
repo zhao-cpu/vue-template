@@ -11,6 +11,9 @@ dependencies:
   '@types/crypto-js':
     specifier: ^4.2.1
     version: 4.2.1
+  '@unocss/reset':
+    specifier: 0.59.0-beta.1
+    version: 0.59.0-beta.1
   '@vueuse/core':
     specifier: ^10.7.1
     version: 10.7.1(vue@3.4.4)
@@ -1315,6 +1318,10 @@ packages:
   /@unocss/reset@0.58.3:
     resolution: {integrity: sha512-Q2KiRQlam2iYsTZgKdvnXEfUN4TA2oVpGIVD9Wa0ggs0XlYj5aOo0g0+4Tgqqn+YaviZQeJKnDs/JWE+ygHhZA==}
     dev: true
+
+  /@unocss/reset@0.59.0-beta.1:
+    resolution: {integrity: sha512-FswTFLBOaeWGs3+Lj/0ozT8LR95OTNrVX9KfaGcRl3yVf3CAyXZmB7IiL171niThL+Uk4qITXVxLxXQg1Kvy8g==}
+    dev: false
 
   /@unocss/rule-utils@0.58.3:
     resolution: {integrity: sha512-0Px9gIW+VOKetZuYET19uamIRpk7A9c8sCzQuGlNvCLXKEWamqXz5asLtnvPzw6SwCXEQDgWXE9i+aeoXaM0Jg==}

@@ -11,5 +11,10 @@ export const homeRouter: RouteRecordRaw[] = [
     path: '/about/:id',
     name: 'about',
     component: () => import('@/views/about/index.vue')
+  },
+  {
+    path: '/demo',
+    name: 'demo',
+    component: () => import('@/views/demo/index.vue')
   }
 ]
