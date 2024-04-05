@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "dev:mock": "cross-env NODE_ENV=mock USEMOKE=true vite --mode mock",
     "dev:test": "vite --mode test",
     "build": "run-p type-check \"build-only {@}\" --",
     "preview": "vite preview",
@@ -24,6 +25,7 @@
     "dayjs": "^1.11.10",
     "echarts": "^5.5.0",
     "mitt": "^3.0.1",
+    "mockjs": "^1.1.0",
     "pinia": "^2.1.7",
     "pinia-plugin-persistedstate": "^3.2.1",
     "qs": "^6.11.2",
@@ -45,6 +47,7 @@
     "@vue/eslint-config-typescript": "^12.0.0",
     "@vue/test-utils": "^2.4.3",
     "@vue/tsconfig": "^0.5.0",
+    "cross-env": "^7.0.3",
     "eslint": "^8.49.0",
     "eslint-plugin-vue": "^9.17.0",
     "jsdom": "^23.0.1",
@@ -55,6 +58,7 @@
     "unplugin-auto-import": "^0.17.3",
     "unplugin-vue-components": "^0.26.0",
     "vite": "^5.0.10",
+    "vite-plugin-mock": "^3.0.1",
     "vite-plugin-remove-console": "^2.2.0",
     "vitest": "^1.0.4",
     "vue-tsc": "^1.8.25"
