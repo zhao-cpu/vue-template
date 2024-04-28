@@ -5,6 +5,8 @@ import directives from '@/directives'
 
 import 'virtual:uno.css'
 import '@unocss/reset/tailwind-compat.css'
+import 'ant-design-vue/dist/reset.css'
+import Antd from 'ant-design-vue'
 
 import App from './App.vue'
 import router from './router'
@@ -18,5 +20,6 @@ pinia.use(piniaPluginPersistedstate)
 app.use(pinia)
 app.use(router)
 app.use(directives)
+app.use(Antd)
 
 app.mount('#app')
