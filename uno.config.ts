@@ -1,6 +1,8 @@
 import { defineConfig } from 'unocss'
-import { presetWind } from 'unocss'
+import { presetWind, presetAttributify } from 'unocss'
 import transformerDirectives from '@unocss/transformer-directives'
+import transformerVariantGroup from '@unocss/transformer-variant-group'
+import transformerCompileClass from '@unocss/transformer-compile-class'
 
 export default defineConfig({
   shortcuts: {},
@@ -11,6 +13,14 @@ export default defineConfig({
   },
   rules: [],
   variants: [],
-  transformers: [transformerDirectives()],
-  presets: [presetWind()]
+  transformers: [transformerDirectives(), transformerVariantGroup(), transformerCompileClass()],
+  presets: [
+    presetWind(),
+    presetAttributify({
+      /** 前缀 */
+      prefix: 'un-',
+      /** 是否强制使用 */
+      prefixedOnly: false
+    })
+  ]
 })
