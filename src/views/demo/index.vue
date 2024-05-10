@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import axios from 'axios'
 defineOptions({ name: 'DemoView' })
 
 usersApi().then((res) => {
